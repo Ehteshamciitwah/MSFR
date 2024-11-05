@@ -1,0 +1,289 @@
+[04/03 12:42:55][INFO] main.py:   26: {'DATASET': {'domain_shift_category': 'same',
+             'imagesize': 224,
+             'name': 'aebad_S',
+             'resize': 256,
+             'subdatasets': ['AeBAD_S']},
+ 'NUM_GPUS': 1,
+ 'OUTPUT_DIR': './log_MSFR_5_54',
+ 'RNG_SEED': 54,
+ 'TEST': {'VISUALIZE': CfgNode({'Random_sample': True, 'Sample_num': 40}),
+          'dataset_path': '/home/kucarst3-dlws/ku500944/dataset/AeBAD/AeBAD/',
+          'enable': True,
+          'method': 'MSFR',
+          'pixel_mode_verify': True,
+          'save_segmentation_images': True,
+          'save_video_segmentation_images': False},
+ 'TEST_SETUPS': CfgNode({'batch_size': 32}),
+ 'TRAIN': {'MSFR': {'DA_low_limit': 0.7,
+                   'DA_up_limit': 1.0,
+                   'FPN_output_dim': (256, 512, 1024),
+                   'decoder_depth': 1,
+                   'decoder_embed_dim': 512,
+                   'feature_compression': False,
+                   'finetune_mask_ratio': 0.4,
+                   'layers_to_extract_from': ['layer1', 'layer2', 'layer3'],
+                   'load_pretrain_model': True,
+                   'mask_ratio': 0.6,
+                   'model_chkpt': '/home/kucarst3-dlws/ku500944/models/MSFR/pretrain_model/mae_pretrain_vit_large.pth',
+                   'norm_pix_loss': True,
+                   'scale_factors': (4.0, 2.0, 1.0),
+                   'test_mask_ratio': 0.0},
+           'backbone': 'wideresnet101',
+           'dataset_path': '/home/kucarst3-dlws/ku500944/dataset/AeBAD/AeBAD/',
+           'enable': True,
+           'method': 'MSFR',
+           'save_model': True},
+ 'TRAIN_SETUPS': {'batch_size': 16,
+                  'epochs': 200,
+                  'learning_rate': 0.001,
+                  'num_workers': 8,
+                  'warmup_epochs': 50,
+                  'weight_decay': 0.05}}
+[04/03 12:42:55][INFO] main.py:   27: path_to_config is /home/kucarst3-dlws/ku500944/models/MSFR/method_config/AeBAD_S/MSFR_5.yaml
+[04/03 12:42:55][INFO] main.py:   31: start training!
+[04/03 12:42:55][INFO] train.py:   40: load dataset!
+[04/03 12:42:55][INFO] train.py:   68: current individual_dataloader is aebad_S_AeBAD_S.
+[04/03 12:42:55][INFO] train.py:   69: the data in current individual_dataloader aebad_S_AeBAD_S are 521.
+[04/03 12:43:08][INFO] train.py:   88: train the decoder FPN of MSFR from scratch!
+[04/03 12:43:10][INFO] train.py:   91: MAE load meg: _IncompatibleKeys(missing_keys=['decoder_FPN_mask_token', 'decoder_FPN_pos_embed', 'simfp_2.0.weight', 'simfp_2.0.bias', 'simfp_2.1.weight', 'simfp_2.1.bias', 'simfp_2.3.weight', 'simfp_2.3.bias', 'simfp_2.4.weight', 'simfp_2.4.norm.weight', 'simfp_2.4.norm.bias', 'simfp_2.5.weight', 'simfp_2.5.norm.weight', 'simfp_2.5.norm.bias', 'simfp_3.0.weight', 'simfp_3.0.bias', 'simfp_3.1.weight', 'simfp_3.1.norm.weight', 'simfp_3.1.norm.bias', 'simfp_3.2.weight', 'simfp_3.2.norm.weight', 'simfp_3.2.norm.bias', 'simfp_4.0.weight', 'simfp_4.0.norm.weight', 'simfp_4.0.norm.bias', 'simfp_4.1.weight', 'simfp_4.1.norm.weight', 'simfp_4.1.norm.bias'], unexpected_keys=[])
+[04/03 12:43:44][INFO] MSFR_pipeline.py:   75: epoch [1/200], loss:2.9908
+[04/03 12:44:16][INFO] MSFR_pipeline.py:   75: epoch [2/200], loss:1.8048
+[04/03 12:44:48][INFO] MSFR_pipeline.py:   75: epoch [3/200], loss:1.3019
+[04/03 12:45:19][INFO] MSFR_pipeline.py:   75: epoch [4/200], loss:1.2226
+[04/03 12:45:49][INFO] MSFR_pipeline.py:   75: epoch [5/200], loss:1.1534
+[04/03 12:46:17][INFO] MSFR_pipeline.py:   75: epoch [6/200], loss:1.0969
+[04/03 12:46:47][INFO] MSFR_pipeline.py:   75: epoch [7/200], loss:1.0486
+[04/03 12:47:18][INFO] MSFR_pipeline.py:   75: epoch [8/200], loss:1.0109
+[04/03 12:47:48][INFO] MSFR_pipeline.py:   75: epoch [9/200], loss:0.9771
+[04/03 12:48:18][INFO] MSFR_pipeline.py:   75: epoch [10/200], loss:0.9466
+[04/03 12:48:48][INFO] MSFR_pipeline.py:   75: epoch [11/200], loss:0.9138
+[04/03 12:49:17][INFO] MSFR_pipeline.py:   75: epoch [12/200], loss:0.8828
+[04/03 12:49:45][INFO] MSFR_pipeline.py:   75: epoch [13/200], loss:0.8511
+[04/03 12:50:15][INFO] MSFR_pipeline.py:   75: epoch [14/200], loss:0.8203
+[04/03 12:50:48][INFO] MSFR_pipeline.py:   75: epoch [15/200], loss:0.7876
+[04/03 12:51:17][INFO] MSFR_pipeline.py:   75: epoch [16/200], loss:0.7570
+[04/03 12:51:47][INFO] MSFR_pipeline.py:   75: epoch [17/200], loss:0.7253
+[04/03 12:52:17][INFO] MSFR_pipeline.py:   75: epoch [18/200], loss:0.6932
+[04/03 12:52:48][INFO] MSFR_pipeline.py:   75: epoch [19/200], loss:0.6623
+[04/03 12:53:16][INFO] MSFR_pipeline.py:   75: epoch [20/200], loss:0.6292
+[04/03 12:53:45][INFO] MSFR_pipeline.py:   75: epoch [21/200], loss:0.5955
+[04/03 12:54:14][INFO] MSFR_pipeline.py:   75: epoch [22/200], loss:0.5631
+[04/03 12:54:45][INFO] MSFR_pipeline.py:   75: epoch [23/200], loss:0.5312
+[04/03 12:55:13][INFO] MSFR_pipeline.py:   75: epoch [24/200], loss:0.5024
+[04/03 12:55:42][INFO] MSFR_pipeline.py:   75: epoch [25/200], loss:0.4692
+[04/03 12:56:14][INFO] MSFR_pipeline.py:   75: epoch [26/200], loss:0.4381
+[04/03 12:56:52][INFO] MSFR_pipeline.py:   75: epoch [27/200], loss:0.4094
+[04/03 12:57:26][INFO] MSFR_pipeline.py:   75: epoch [28/200], loss:0.3807
+[04/03 12:58:02][INFO] MSFR_pipeline.py:   75: epoch [29/200], loss:0.3529
+[04/03 12:58:45][INFO] MSFR_pipeline.py:   75: epoch [30/200], loss:0.3281
+[04/03 12:59:30][INFO] MSFR_pipeline.py:   75: epoch [31/200], loss:0.3045
+[04/03 13:00:14][INFO] MSFR_pipeline.py:   75: epoch [32/200], loss:0.2817
+[04/03 13:00:56][INFO] MSFR_pipeline.py:   75: epoch [33/200], loss:0.2603
+[04/03 13:01:40][INFO] MSFR_pipeline.py:   75: epoch [34/200], loss:0.2396
+[04/03 13:02:24][INFO] MSFR_pipeline.py:   75: epoch [35/200], loss:0.2230
+[04/03 13:03:07][INFO] MSFR_pipeline.py:   75: epoch [36/200], loss:0.2090
+[04/03 13:03:51][INFO] MSFR_pipeline.py:   75: epoch [37/200], loss:0.1933
+[04/03 13:04:34][INFO] MSFR_pipeline.py:   75: epoch [38/200], loss:0.1821
+[04/03 13:05:13][INFO] MSFR_pipeline.py:   75: epoch [39/200], loss:0.1732
+[04/03 13:05:50][INFO] MSFR_pipeline.py:   75: epoch [40/200], loss:0.1676
+[04/03 13:06:30][INFO] MSFR_pipeline.py:   75: epoch [41/200], loss:0.1609
+[04/03 13:07:09][INFO] MSFR_pipeline.py:   75: epoch [42/200], loss:0.1573
+[04/03 13:07:46][INFO] MSFR_pipeline.py:   75: epoch [43/200], loss:0.1548
+[04/03 13:08:24][INFO] MSFR_pipeline.py:   75: epoch [44/200], loss:0.1534
+[04/03 13:09:03][INFO] MSFR_pipeline.py:   75: epoch [45/200], loss:0.1529
+[04/03 13:09:41][INFO] MSFR_pipeline.py:   75: epoch [46/200], loss:0.1523
+[04/03 13:10:19][INFO] MSFR_pipeline.py:   75: epoch [47/200], loss:0.1510
+[04/03 13:10:56][INFO] MSFR_pipeline.py:   75: epoch [48/200], loss:0.1523
+[04/03 13:11:30][INFO] MSFR_pipeline.py:   75: epoch [49/200], loss:0.1508
+[04/03 13:11:34][INFO] MSFR_pipeline.py:   48: current lr is 0.00098
+[04/03 13:12:07][INFO] MSFR_pipeline.py:   75: epoch [50/200], loss:0.1496
+[04/03 13:12:47][INFO] MSFR_pipeline.py:   75: epoch [51/200], loss:0.1491
+[04/03 13:13:26][INFO] MSFR_pipeline.py:   75: epoch [52/200], loss:0.1496
+[04/03 13:14:02][INFO] MSFR_pipeline.py:   75: epoch [53/200], loss:0.1480
+[04/03 13:14:41][INFO] MSFR_pipeline.py:   75: epoch [54/200], loss:0.1478
+[04/03 13:15:19][INFO] MSFR_pipeline.py:   75: epoch [55/200], loss:0.1474
+[04/03 13:15:58][INFO] MSFR_pipeline.py:   75: epoch [56/200], loss:0.1463
+[04/03 13:16:37][INFO] MSFR_pipeline.py:   75: epoch [57/200], loss:0.1454
+[04/03 13:17:18][INFO] MSFR_pipeline.py:   75: epoch [58/200], loss:0.1455
+[04/03 13:17:52][INFO] MSFR_pipeline.py:   75: epoch [59/200], loss:0.1439
+[04/03 13:18:31][INFO] MSFR_pipeline.py:   75: epoch [60/200], loss:0.1435
+[04/03 13:19:09][INFO] MSFR_pipeline.py:   75: epoch [61/200], loss:0.1429
+[04/03 13:19:48][INFO] MSFR_pipeline.py:   75: epoch [62/200], loss:0.1421
+[04/03 13:20:27][INFO] MSFR_pipeline.py:   75: epoch [63/200], loss:0.1420
+[04/03 13:21:06][INFO] MSFR_pipeline.py:   75: epoch [64/200], loss:0.1404
+[04/03 13:21:43][INFO] MSFR_pipeline.py:   75: epoch [65/200], loss:0.1409
+[04/03 13:22:18][INFO] MSFR_pipeline.py:   75: epoch [66/200], loss:0.1403
+[04/03 13:23:00][INFO] MSFR_pipeline.py:   75: epoch [67/200], loss:0.1388
+[04/03 13:23:40][INFO] MSFR_pipeline.py:   75: epoch [68/200], loss:0.1382
+[04/03 13:24:21][INFO] MSFR_pipeline.py:   75: epoch [69/200], loss:0.1386
+[04/03 13:24:57][INFO] MSFR_pipeline.py:   75: epoch [70/200], loss:0.1374
+[04/03 13:25:40][INFO] MSFR_pipeline.py:   75: epoch [71/200], loss:0.1378
+[04/03 13:26:15][INFO] MSFR_pipeline.py:   75: epoch [72/200], loss:0.1367
+[04/03 13:27:00][INFO] MSFR_pipeline.py:   75: epoch [73/200], loss:0.1361
+[04/03 13:27:43][INFO] MSFR_pipeline.py:   75: epoch [74/200], loss:0.1362
+[04/03 13:28:21][INFO] MSFR_pipeline.py:   75: epoch [75/200], loss:0.1350
+[04/03 13:29:04][INFO] MSFR_pipeline.py:   75: epoch [76/200], loss:0.1350
+[04/03 13:29:47][INFO] MSFR_pipeline.py:   75: epoch [77/200], loss:0.1346
+[04/03 13:30:29][INFO] MSFR_pipeline.py:   75: epoch [78/200], loss:0.1343
+[04/03 13:31:12][INFO] MSFR_pipeline.py:   75: epoch [79/200], loss:0.1339
+[04/03 13:31:53][INFO] MSFR_pipeline.py:   75: epoch [80/200], loss:0.1329
+[04/03 13:32:36][INFO] MSFR_pipeline.py:   75: epoch [81/200], loss:0.1334
+[04/03 13:33:14][INFO] MSFR_pipeline.py:   75: epoch [82/200], loss:0.1332
+[04/03 13:33:50][INFO] MSFR_pipeline.py:   75: epoch [83/200], loss:0.1330
+[04/03 13:34:29][INFO] MSFR_pipeline.py:   75: epoch [84/200], loss:0.1318
+[04/03 13:35:03][INFO] MSFR_pipeline.py:   75: epoch [85/200], loss:0.1314
+[04/03 13:35:37][INFO] MSFR_pipeline.py:   75: epoch [86/200], loss:0.1317
+[04/03 13:36:08][INFO] MSFR_pipeline.py:   75: epoch [87/200], loss:0.1306
+[04/03 13:36:44][INFO] MSFR_pipeline.py:   75: epoch [88/200], loss:0.1305
+[04/03 13:37:19][INFO] MSFR_pipeline.py:   75: epoch [89/200], loss:0.1301
+[04/03 13:37:54][INFO] MSFR_pipeline.py:   75: epoch [90/200], loss:0.1308
+[04/03 13:38:24][INFO] MSFR_pipeline.py:   75: epoch [91/200], loss:0.1300
+[04/03 13:38:57][INFO] MSFR_pipeline.py:   75: epoch [92/200], loss:0.1298
+[04/03 13:39:34][INFO] MSFR_pipeline.py:   75: epoch [93/200], loss:0.1294
+[04/03 13:40:09][INFO] MSFR_pipeline.py:   75: epoch [94/200], loss:0.1290
+[04/03 13:40:43][INFO] MSFR_pipeline.py:   75: epoch [95/200], loss:0.1286
+[04/03 13:41:20][INFO] MSFR_pipeline.py:   75: epoch [96/200], loss:0.1284
+[04/03 13:41:56][INFO] MSFR_pipeline.py:   75: epoch [97/200], loss:0.1286
+[04/03 13:42:27][INFO] MSFR_pipeline.py:   75: epoch [98/200], loss:0.1276
+[04/03 13:43:03][INFO] MSFR_pipeline.py:   75: epoch [99/200], loss:0.1279
+[04/03 13:43:03][INFO] MSFR_pipeline.py:   48: current lr is 0.00100
+[04/03 13:43:34][INFO] MSFR_pipeline.py:   75: epoch [100/200], loss:0.1275
+[04/03 13:44:11][INFO] MSFR_pipeline.py:   75: epoch [101/200], loss:0.1275
+[04/03 13:44:42][INFO] MSFR_pipeline.py:   75: epoch [102/200], loss:0.1267
+[04/03 13:45:20][INFO] MSFR_pipeline.py:   75: epoch [103/200], loss:0.1267
+[04/03 13:45:50][INFO] MSFR_pipeline.py:   75: epoch [104/200], loss:0.1265
+[04/03 13:46:25][INFO] MSFR_pipeline.py:   75: epoch [105/200], loss:0.1261
+[04/03 13:47:01][INFO] MSFR_pipeline.py:   75: epoch [106/200], loss:0.1256
+[04/03 13:47:35][INFO] MSFR_pipeline.py:   75: epoch [107/200], loss:0.1274
+[04/03 13:48:06][INFO] MSFR_pipeline.py:   75: epoch [108/200], loss:0.1252
+[04/03 13:48:40][INFO] MSFR_pipeline.py:   75: epoch [109/200], loss:0.1249
+[04/03 13:49:16][INFO] MSFR_pipeline.py:   75: epoch [110/200], loss:0.1247
+[04/03 13:49:53][INFO] MSFR_pipeline.py:   75: epoch [111/200], loss:0.1251
+[04/03 13:50:26][INFO] MSFR_pipeline.py:   75: epoch [112/200], loss:0.1252
+[04/03 13:50:56][INFO] MSFR_pipeline.py:   75: epoch [113/200], loss:0.1252
+[04/03 13:51:26][INFO] MSFR_pipeline.py:   75: epoch [114/200], loss:0.1244
+[04/03 13:52:02][INFO] MSFR_pipeline.py:   75: epoch [115/200], loss:0.1242
+[04/03 13:52:37][INFO] MSFR_pipeline.py:   75: epoch [116/200], loss:0.1239
+[04/03 13:53:21][INFO] MSFR_pipeline.py:   75: epoch [117/200], loss:0.1239
+[04/03 13:54:02][INFO] MSFR_pipeline.py:   75: epoch [118/200], loss:0.1233
+[04/03 13:54:46][INFO] MSFR_pipeline.py:   75: epoch [119/200], loss:0.1232
+[04/03 13:55:27][INFO] MSFR_pipeline.py:   75: epoch [120/200], loss:0.1205
+[04/03 13:56:13][INFO] MSFR_pipeline.py:   75: epoch [121/200], loss:0.1178
+[04/03 13:56:57][INFO] MSFR_pipeline.py:   75: epoch [122/200], loss:0.1167
+[04/03 13:57:40][INFO] MSFR_pipeline.py:   75: epoch [123/200], loss:0.1159
+[04/03 13:58:26][INFO] MSFR_pipeline.py:   75: epoch [124/200], loss:0.1156
+[04/03 13:59:04][INFO] MSFR_pipeline.py:   75: epoch [125/200], loss:0.1156
+[04/03 13:59:44][INFO] MSFR_pipeline.py:   75: epoch [126/200], loss:0.1152
+[04/03 14:00:23][INFO] MSFR_pipeline.py:   75: epoch [127/200], loss:0.1147
+[04/03 14:01:01][INFO] MSFR_pipeline.py:   75: epoch [128/200], loss:0.1147
+[04/03 14:01:41][INFO] MSFR_pipeline.py:   75: epoch [129/200], loss:0.1144
+[04/03 14:02:18][INFO] MSFR_pipeline.py:   75: epoch [130/200], loss:0.1146
+[04/03 14:02:51][INFO] MSFR_pipeline.py:   75: epoch [131/200], loss:0.1143
+[04/03 14:03:30][INFO] MSFR_pipeline.py:   75: epoch [132/200], loss:0.1143
+[04/03 14:04:09][INFO] MSFR_pipeline.py:   75: epoch [133/200], loss:0.1137
+[04/03 14:04:45][INFO] MSFR_pipeline.py:   75: epoch [134/200], loss:0.1136
+[04/03 14:05:24][INFO] MSFR_pipeline.py:   75: epoch [135/200], loss:0.1136
+[04/03 14:06:03][INFO] MSFR_pipeline.py:   75: epoch [136/200], loss:0.1136
+[04/03 14:06:38][INFO] MSFR_pipeline.py:   75: epoch [137/200], loss:0.1131
+[04/03 14:07:17][INFO] MSFR_pipeline.py:   75: epoch [138/200], loss:0.1130
+[04/03 14:07:56][INFO] MSFR_pipeline.py:   75: epoch [139/200], loss:0.1133
+[04/03 14:08:29][INFO] MSFR_pipeline.py:   75: epoch [140/200], loss:0.1132
+[04/03 14:09:02][INFO] MSFR_pipeline.py:   75: epoch [141/200], loss:0.1128
+[04/03 14:09:41][INFO] MSFR_pipeline.py:   75: epoch [142/200], loss:0.1127
+[04/03 14:10:20][INFO] MSFR_pipeline.py:   75: epoch [143/200], loss:0.1125
+[04/03 14:10:59][INFO] MSFR_pipeline.py:   75: epoch [144/200], loss:0.1128
+[04/03 14:11:33][INFO] MSFR_pipeline.py:   75: epoch [145/200], loss:0.1124
+[04/03 14:12:11][INFO] MSFR_pipeline.py:   75: epoch [146/200], loss:0.1125
+[04/03 14:12:44][INFO] MSFR_pipeline.py:   75: epoch [147/200], loss:0.1120
+[04/03 14:13:24][INFO] MSFR_pipeline.py:   75: epoch [148/200], loss:0.1125
+[04/03 14:13:57][INFO] MSFR_pipeline.py:   75: epoch [149/200], loss:0.1118
+[04/03 14:14:01][INFO] MSFR_pipeline.py:   48: current lr is 0.00010
+[04/03 14:14:36][INFO] MSFR_pipeline.py:   75: epoch [150/200], loss:0.1113
+[04/03 14:15:15][INFO] MSFR_pipeline.py:   75: epoch [151/200], loss:0.1121
+[04/03 14:15:48][INFO] MSFR_pipeline.py:   75: epoch [152/200], loss:0.1119
+[04/03 14:16:23][INFO] MSFR_pipeline.py:   75: epoch [153/200], loss:0.1115
+[04/03 14:16:57][INFO] MSFR_pipeline.py:   75: epoch [154/200], loss:0.1120
+[04/03 14:17:33][INFO] MSFR_pipeline.py:   75: epoch [155/200], loss:0.1119
+[04/03 14:18:09][INFO] MSFR_pipeline.py:   75: epoch [156/200], loss:0.1114
+[04/03 14:18:46][INFO] MSFR_pipeline.py:   75: epoch [157/200], loss:0.1119
+[04/03 14:19:22][INFO] MSFR_pipeline.py:   75: epoch [158/200], loss:0.1119
+[04/03 14:19:57][INFO] MSFR_pipeline.py:   75: epoch [159/200], loss:0.1113
+[04/03 14:20:32][INFO] MSFR_pipeline.py:   75: epoch [160/200], loss:0.1116
+[04/03 14:21:08][INFO] MSFR_pipeline.py:   75: epoch [161/200], loss:0.1113
+[04/03 14:21:44][INFO] MSFR_pipeline.py:   75: epoch [162/200], loss:0.1110
+[04/03 14:22:28][INFO] MSFR_pipeline.py:   75: epoch [163/200], loss:0.1111
+[04/03 14:23:02][INFO] MSFR_pipeline.py:   75: epoch [164/200], loss:0.1111
+[04/03 14:23:39][INFO] MSFR_pipeline.py:   75: epoch [165/200], loss:0.1109
+[04/03 14:24:21][INFO] MSFR_pipeline.py:   75: epoch [166/200], loss:0.1107
+[04/03 14:25:05][INFO] MSFR_pipeline.py:   75: epoch [167/200], loss:0.1111
+[04/03 14:25:44][INFO] MSFR_pipeline.py:   75: epoch [168/200], loss:0.1110
+[04/03 14:26:19][INFO] MSFR_pipeline.py:   75: epoch [169/200], loss:0.1108
+[04/03 14:26:57][INFO] MSFR_pipeline.py:   75: epoch [170/200], loss:0.1110
+[04/03 14:27:32][INFO] MSFR_pipeline.py:   75: epoch [171/200], loss:0.1107
+[04/03 14:28:18][INFO] MSFR_pipeline.py:   75: epoch [172/200], loss:0.1105
+[04/03 14:29:02][INFO] MSFR_pipeline.py:   75: epoch [173/200], loss:0.1111
+[04/03 14:29:33][INFO] MSFR_pipeline.py:   75: epoch [174/200], loss:0.1107
+[04/03 14:30:03][INFO] MSFR_pipeline.py:   75: epoch [175/200], loss:0.1110
+[04/03 14:30:32][INFO] MSFR_pipeline.py:   75: epoch [176/200], loss:0.1103
+[04/03 14:31:08][INFO] MSFR_pipeline.py:   75: epoch [177/200], loss:0.1108
+[04/03 14:31:38][INFO] MSFR_pipeline.py:   75: epoch [178/200], loss:0.1105
+[04/03 14:32:06][INFO] MSFR_pipeline.py:   75: epoch [179/200], loss:0.1108
+[04/03 14:32:37][INFO] MSFR_pipeline.py:   75: epoch [180/200], loss:0.1100
+[04/03 14:33:12][INFO] MSFR_pipeline.py:   75: epoch [181/200], loss:0.1110
+[04/03 14:33:41][INFO] MSFR_pipeline.py:   75: epoch [182/200], loss:0.1104
+[04/03 14:34:11][INFO] MSFR_pipeline.py:   75: epoch [183/200], loss:0.1103
+[04/03 14:34:42][INFO] MSFR_pipeline.py:   75: epoch [184/200], loss:0.1108
+[04/03 14:35:13][INFO] MSFR_pipeline.py:   75: epoch [185/200], loss:0.1112
+[04/03 14:35:46][INFO] MSFR_pipeline.py:   75: epoch [186/200], loss:0.1104
+[04/03 14:36:16][INFO] MSFR_pipeline.py:   75: epoch [187/200], loss:0.1109
+[04/03 14:36:46][INFO] MSFR_pipeline.py:   75: epoch [188/200], loss:0.1104
+[04/03 14:37:15][INFO] MSFR_pipeline.py:   75: epoch [189/200], loss:0.1105
+[04/03 14:37:45][INFO] MSFR_pipeline.py:   75: epoch [190/200], loss:0.1104
+[04/03 14:38:16][INFO] MSFR_pipeline.py:   75: epoch [191/200], loss:0.1103
+[04/03 14:38:48][INFO] MSFR_pipeline.py:   75: epoch [192/200], loss:0.1104
+[04/03 14:39:19][INFO] MSFR_pipeline.py:   75: epoch [193/200], loss:0.1105
+[04/03 14:39:49][INFO] MSFR_pipeline.py:   75: epoch [194/200], loss:0.1103
+[04/03 14:40:19][INFO] MSFR_pipeline.py:   75: epoch [195/200], loss:0.1109
+[04/03 14:40:49][INFO] MSFR_pipeline.py:   75: epoch [196/200], loss:0.1103
+[04/03 14:41:19][INFO] MSFR_pipeline.py:   75: epoch [197/200], loss:0.1104
+[04/03 14:41:50][INFO] MSFR_pipeline.py:   75: epoch [198/200], loss:0.1106
+[04/03 14:42:19][INFO] MSFR_pipeline.py:   75: epoch [199/200], loss:0.1104
+[04/03 14:42:19][INFO] MSFR_pipeline.py:   48: current lr is 0.00001
+[04/03 14:42:51][INFO] MSFR_pipeline.py:   75: epoch [200/200], loss:0.1103
+[04/03 14:42:51][INFO] train.py:  122: current domain shift mode is same!
+[04/03 14:42:51][INFO] train.py:  126: current test individual_dataloader is aebad_S_AeBAD_S.
+[04/03 14:42:51][INFO] train.py:  127: the test data in current individual_dataloader aebad_S_AeBAD_S are 689.
+[04/03 14:42:51][INFO] train.py:  129: Computing evaluation metrics.
+[04/03 14:55:42][INFO] common.py:  265: image save complete!
+[04/03 14:55:42][INFO] train.py:  152: aebad_S_AeBAD_S's Image_Level AUROC is 85.900000.%
+[04/03 14:55:42][INFO] train.py:  155: aebad_S_AeBAD_S's Full_Pixel_Level AUROC is 94.347524.%
+[04/03 14:55:42][INFO] train.py:  159: aebad_S_AeBAD_S's per-region-overlap (PRO) AUROC is 92.100000.%
+[04/03 14:55:42][INFO] train.py:  122: current domain shift mode is background!
+[04/03 14:55:42][INFO] train.py:  126: current test individual_dataloader is aebad_S_AeBAD_S.
+[04/03 14:55:42][INFO] train.py:  127: the test data in current individual_dataloader aebad_S_AeBAD_S are 305.
+[04/03 14:55:42][INFO] train.py:  129: Computing evaluation metrics.
+[04/03 14:59:53][INFO] common.py:  265: image save complete!
+[04/03 14:59:54][INFO] train.py:  152: aebad_S_AeBAD_S's Image_Level AUROC is 90.100000.%
+[04/03 14:59:54][INFO] train.py:  155: aebad_S_AeBAD_S's Full_Pixel_Level AUROC is 90.700200.%
+[04/03 14:59:54][INFO] train.py:  159: aebad_S_AeBAD_S's per-region-overlap (PRO) AUROC is 90.800000.%
+[04/03 14:59:54][INFO] train.py:  122: current domain shift mode is illumination!
+[04/03 14:59:54][INFO] train.py:  126: current test individual_dataloader is aebad_S_AeBAD_S.
+[04/03 14:59:54][INFO] train.py:  127: the test data in current individual_dataloader aebad_S_AeBAD_S are 273.
+[04/03 14:59:54][INFO] train.py:  129: Computing evaluation metrics.
+[04/03 15:03:43][INFO] common.py:  265: image save complete!
+[04/03 15:03:43][INFO] train.py:  152: aebad_S_AeBAD_S's Image_Level AUROC is 90.400000.%
+[04/03 15:03:43][INFO] train.py:  155: aebad_S_AeBAD_S's Full_Pixel_Level AUROC is 93.293973.%
+[04/03 15:03:43][INFO] train.py:  159: aebad_S_AeBAD_S's per-region-overlap (PRO) AUROC is 90.400000.%
+[04/03 15:03:43][INFO] train.py:  122: current domain shift mode is view!
+[04/03 15:03:43][INFO] train.py:  126: current test individual_dataloader is aebad_S_AeBAD_S.
+[04/03 15:03:43][INFO] train.py:  127: the test data in current individual_dataloader aebad_S_AeBAD_S are 372.
+[04/03 15:03:43][INFO] train.py:  129: Computing evaluation metrics.
+[04/03 15:09:25][INFO] common.py:  265: image save complete!
+[04/03 15:09:25][INFO] train.py:  152: aebad_S_AeBAD_S's Image_Level AUROC is 82.000000.%
+[04/03 15:09:25][INFO] train.py:  155: aebad_S_AeBAD_S's Full_Pixel_Level AUROC is 90.367751.%
+[04/03 15:09:25][INFO] train.py:  159: aebad_S_AeBAD_S's per-region-overlap (PRO) AUROC is 88.500000.%
+[04/03 15:09:25][INFO] train.py:  162: Method training phase complete!
+[04/03 15:09:25][INFO] train.py:  165: Mean AUROC is 87.100000.%
+[04/03 15:09:25][INFO] train.py:  165: Mean Pixel-AUROC is 92.177362.%
+[04/03 15:09:25][INFO] train.py:  165: Mean per-region-overlap (PRO) is 90.450000.%
+[04/03 15:09:25][INFO] main.py:   42: Main function complete!
