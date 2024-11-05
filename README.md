@@ -1,7 +1,7 @@
 ## Multi-scale feature reconstruction network for industrial anomaly detection
 
 <p align="center">
-  <img src=assets/image/MSFR.png width="50%">
+  <img src=assets/image/MSFR.png width="80%">
 </p>
 
 This is an official PyTorch implementation of the paper [Multi-scale feature reconstruction network for industrial anomaly detection](https://www.sciencedirect.com/science/article/pii/S095070512401284X).
