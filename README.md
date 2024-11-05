@@ -1,16 +1,18 @@
-## Industrial Anomaly Detection with Domain Shift: A Real-world Dataset and Masked Multi-scale Reconstruction
+## Multi-scale feature reconstruction network for industrial anomaly detection
 
 <p align="center">
-  <img src=assets/image/MSFR.png width="30%">
+  <img src=assets/image/MSFR.png width="50%">
 </p>
 
-This is an official PyTorch implementation of the paper [Industrial Anomaly Detection with Domain Shift: A Real-world Dataset and Masked Multi-scale Reconstruction](https://arxiv.org/abs/2304.02216).
+This is an official PyTorch implementation of the paper [Multi-scale feature reconstruction network for industrial anomaly detection](https://www.sciencedirect.com/science/article/pii/S095070512401284X).
 ```
-@article{zhang2023industrial,
-  title={Industrial Anomaly Detection with Domain Shift: A Real-world Dataset and Masked Multi-scale Reconstruction},
-  author={Zhang, Zilong and Zhao, Zhibin and Zhang, Xingwu and Sun, Chuang and Chen, Xuefeng},
-  journal={arXiv preprint arXiv:2304.02216},
-  year={2023}
+@article{iqbal2024multi,
+  title={Multi-scale feature reconstruction network for industrial anomaly detection},
+  author={Iqbal, Ehtesham and Khan, Samee Ullah and Javed, Sajid and Moyo, Brain and Zweiri, Yahya and Abdulrahman, Yusra},
+  journal={Knowledge-Based Systems},
+  pages={112650},
+  year={2024},
+  publisher={Elsevier}
 }
 ```
 
