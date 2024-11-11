@@ -1,3 +1,7 @@
+**[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-scale-feature-reconstruction-network/anomaly-detection-on-aebad-s)](https://paperswithcode.com/sota/anomaly-detection-on-aebad-s?p=multi-scale-feature-reconstruction-network)**
+**[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-scale-feature-reconstruction-network/unsupervised-anomaly-detection-on-aebad-s)](https://paperswithcode.com/sota/unsupervised-anomaly-detection-on-aebad-s?p=multi-scale-feature-reconstruction-network)**
+**[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-scale-feature-reconstruction-network/anomaly-detection-on-mvtecad-10)](https://paperswithcode.com/sota/anomaly-detection-on-mvtecad-10?p=multi-scale-feature-reconstruction-network)**
+**[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multi-scale-feature-reconstruction-network/unsupervised-anomaly-detection-on-mvtecad-1)](https://paperswithcode.com/sota/unsupervised-anomaly-detection-on-mvtecad-1?p=multi-scale-feature-reconstruction-network)**
 ## Multi-scale feature reconstruction network for industrial anomaly detection
 
 <p align="center">
