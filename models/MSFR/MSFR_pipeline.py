@@ -75,7 +75,7 @@ class MSFR_pipeline_:
             LOGGER.info('epoch [{}/{}], loss:{:.4f}'.format(epoch + 1,
                                                             self.cfg.TRAIN_SETUPS.epochs,
                                                             np.mean(loss_list)))
-            if self.save_loss > np.mean(loss_list):
+            if self.save_loss < np.mean(loss_list):
                 self.save_loss = np.mean(loss_list)
                 self.save_model()
 
